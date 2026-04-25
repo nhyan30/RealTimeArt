@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7458219681386281493}
-  - component: {fileID: 7621382606256657283}
+  - component: {fileID: 7270902956269913058}
+  - component: {fileID: 2739649653280510673}
+  - component: {fileID: 8578190331519457016}
   m_Layer: 0
   m_Name: TessellationPattern
   m_TagString: Untagged
@@ -32,7 +34,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7621382606256657283
+--- !u!33 &7270902956269913058
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235577847754520509}
+  m_Mesh: {fileID: 0}
+--- !u!23 &2739649653280510673
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235577847754520509}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 74d9de6a844e3a34f8ed0e9d1f267554, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8578190331519457016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,15 +96,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4235577847754520509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00a620bafe2e1e4e8ce8a89ae20c8c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 70cebe8c4a0a54140a90c72728d6935c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triangleSize: 0.35
-  lineColor: {r: 0.55, g: 0.92, b: 0.95, a: 0.9}
+  boardSize: 7
+  cellSize: 0.5
   lineWidth: 0.014
-  glowColor: {r: 0.3, g: 0.7, b: 0.95, a: 0.15}
+  lineColor: {r: 0.55, g: 0.95, b: 0.95, a: 1}
   glowWidth: 0.05
-  maxStages: 5
-  baseExtent: 1.5
-  extentPerStage: 0.75
-  animDuration: 0.6
+  glowColor: {r: 0.3, g: 0.8, b: 0.95, a: 0.3}
+  maxPeakHeight: 2.5
+  maxPeakRadius: 4.5
+  growSpeed: 1
+  centerMoveSpeed: 4
